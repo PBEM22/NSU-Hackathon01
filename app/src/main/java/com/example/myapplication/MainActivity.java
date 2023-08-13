@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -22,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
         layoutParams.flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND;
         layoutParams.dimAmount = 0.8f;
         getWindow().setAttributes(layoutParams);
+
+        //액션 바(타이틀 바) 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         btn_fontSize = findViewById(R.id.btn_fontSize);
         btn_easyMode = findViewById(R.id.btn_easyMode);

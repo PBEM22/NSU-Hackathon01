@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,10 +19,10 @@ public class CustomDialog extends Dialog {
 
     private TextView txt_contents;
     private Button checkPhoneClick;
-    private Button backHome;
+    private ImageButton backHome;
 
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     public CustomDialog(@NonNull Context context, String contents) {
         super(context);
         setContentView(R.layout.activity_custom_dialog);

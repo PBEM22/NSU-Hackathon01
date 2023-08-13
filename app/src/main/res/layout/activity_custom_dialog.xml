@@ -4,11 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="344dp"
         android:layout_height="446dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -19,7 +21,7 @@
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_marginBottom="160dp"
             android:text="Contents"
             android:gravity="center"
@@ -57,25 +59,38 @@
 
             <Button
                 android:id="@+id/btn_onsetting"
-                android:layout_width="match_parent"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="80dp"
+                android:layout_marginBottom="16dp"
+                android:background="#E9FFCD"
                 android:onClick="shutDownClick"
-                android:text="설정 이동"
-                android:textSize="35sp"
+                android:text="이동하기"
+                android:textColor="#000000"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/txt_contents"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"/>
 
-            <Button
-                android:id="@+id/btn_shutdown"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="shutDownClick"
-                android:text="Done"
-                android:textSize="35sp"
-                app:layout_constraintBottom_toBottomOf="@+id/txt_contents"
-                tools:layout_editor_absoluteX="2dp" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/btn_shutdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="종료"
+            android:maxWidth="60dp"
+            android:maxHeight="60dp"
+            android:onClick="shutDownClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
