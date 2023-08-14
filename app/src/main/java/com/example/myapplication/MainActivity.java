@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         magni = findViewById(R.id.magni);
         btn_fontSize = findViewById(R.id.btn_fontSize);
         btn_easyMode = findViewById(R.id.btn_easyMode);
-
+        phone_info = findViewById(R.id.phone_info);
 
         magni.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         phone_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDevice("휴대전화 정보 확인","1. 설정에 들어간다.\\n     2. 화면을 맨 아래로 내린다.\\n     3. '휴대전화 정보' 를 클릭한다.");
+                showDevice("휴대전화 정보 확인","1. 설정에 들어간다.\n     2. 화면을 맨 아래로 내린다.\n     3. '휴대전화 정보' 를 클릭한다.");
             }
         });
     }
