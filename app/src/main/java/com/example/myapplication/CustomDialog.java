@@ -23,12 +23,15 @@ public class CustomDialog extends Dialog {
 
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
-    public CustomDialog(@NonNull Context context, String contents) {
+    public CustomDialog(@NonNull Context context, String buttonLabel,String contents) {
         super(context);
         setContentView(R.layout.activity_custom_dialog);
 
         txt_contents = findViewById(R.id.txt_contents);
         txt_contents.setText(contents);
+        TextView labelTextView = findViewById(R.id.buttonLabel);
+        labelTextView.setText(buttonLabel);
+
         checkPhoneClick = findViewById(R.id.btn_onsetting);
         backHome = findViewById(R.id.btn_shutdown);
 
