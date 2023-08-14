@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         magni = findViewById(R.id.magni);
         btn_fontSize = findViewById(R.id.btn_fontSize);
         btn_easyMode = findViewById(R.id.btn_easyMode);
+        
         phone_info = findViewById(R.id.phone_info);
 
         magni.setOnClickListener(new View.OnClickListener() {
