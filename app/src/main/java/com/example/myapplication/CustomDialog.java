@@ -8,22 +8,16 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.example.myapplication.R;
-
 public class CustomDialog extends Dialog {
-
     private TextView txt_contents;
     private Button checkPhoneClick;
     private ImageButton backHome;
 
-
-    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
-    public CustomDialog(@NonNull Context context, String buttonLabel,String contents) {
+    public CustomDialog(@NonNull Context context, String buttonLabel, String contents, String type) {
         super(context);
         setContentView(R.layout.activity_custom_dialog);
 
@@ -38,8 +32,15 @@ public class CustomDialog extends Dialog {
         checkPhoneClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
-                Intent intent = new Intent(Settings.ACTION_DISPLAY_SETTINGS);
-                context.startActivity(intent);
+                if (type.equals("device")) {
+                    showDeviceInfo(context);
+                } else if (type.equals("accessibility")) {
+                    showAccessibility(context);
+                } else if (type.equals("mode")) {
+                    showMode(context);
+                } else if(type.equals("app")) {
+                    showApp(context);
+                }
                 dismiss();
             }
         });
@@ -50,5 +51,25 @@ public class CustomDialog extends Dialog {
                 dismiss();
             }
         });
+    }
+
+    private void showDeviceInfo(Context context) {
+        Intent intent = new Intent(Settings.ACTION_DEVICE_INFO_SETTINGS);
+        context.startActivity(intent);
+    }
+
+    private void showAccessibility(Context context) {
+        Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+        context.startActivity(intent);
+    }
+
+    private void showMode(Context context) {
+        Intent intent = new Intent(Settings.ACTION_DISPLAY_SETTINGS);
+        context.startActivity(intent);
+    }
+
+    private void showApp(Context context) {
+        Intent intent = new Intent(Settings.ACTION_DISPLAY_SETTINGS);
+        context.startActivity(intent);
     }
 }
