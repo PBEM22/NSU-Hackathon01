@@ -7,5 +7,17 @@
 
     <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
 
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        // Set the splash screen background, animated icon, and animation duration.
+        <item name="windowSplashScreenBackground">#E9FFCD</item>
 
+        // Use windowSplashScreenAnimatedIcon to add either a drawable or an
+        // animated drawable. One of these is required.
+        <item name="windowSplashScreenAnimatedIcon">@drawable/img3</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>  # Required for
+        # animated icons
+
+        // 앱의 스플래시 화면 이후에 표시되는 액티비티의 테마를 설정
+        <item name="postSplashScreenTheme">@style/Theme.MyApplication</item>  # Required.
+    </style>
 </resources>
