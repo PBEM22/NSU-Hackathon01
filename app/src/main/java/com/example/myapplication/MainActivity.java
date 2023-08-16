@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private AppCompatImageButton btn_easyMode;
     private AppCompatImageButton app;
     private AppCompatImageButton phone_info;
+    private AppCompatImageButton btn_exit;
     private TextView buttonLabel;
 
     private int clickCount = 0;
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         btn_easyMode = findViewById(R.id.btn_easyMode);
         app = findViewById(R.id.app);
         phone_info = findViewById(R.id.phone_info);
+        btn_exit = findViewById(R.id.btn_exit);
+
 
         magni.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btn_fontSize.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
 
                 clickCount++;
@@ -68,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btn_easyMode.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
 
                 clickCount++;
@@ -80,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         app.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
 
                 clickCount++;
@@ -93,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         phone_info.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
 
                 clickCount++;
@@ -102,6 +111,31 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     showCustomDialog("휴대전화 정보 확인", "1. 이동하기 버튼 \n2. 화면을 맨 아래로 내림 \n3. '휴대전화 정보' 클릭", "device");
                 }
+            }
+        });
+
+        btn_exit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("정말로 종료하시겠습니까?");
+                builder.setTitle("종료 알림창")
+                        .setCancelable(false)
+                        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        })
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.setTitle("종료 알림창");
+                alert.show();
             }
         });
     }
