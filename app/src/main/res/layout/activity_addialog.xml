@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="344dp"
+    android:layout_height="450dp"
+    android:background="@drawable/border_background"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/adImage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/img3"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:contentDescription="광고 이미지" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="닫기"
+        android:textSize="20dp"
+        android:textColor="#111111"
+        android:background="#E9FFCD"
+        android:elevation="4dp" />
+
+</RelativeLayout>
