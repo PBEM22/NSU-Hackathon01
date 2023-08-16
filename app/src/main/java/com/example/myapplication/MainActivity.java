@@ -58,20 +58,20 @@ public class MainActivity extends AppCompatActivity {
         btn_easyMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showCustomDialog("쉬운 모드 사용","1. 이동하기 버튼을 누른다. \n 2. 아래에서 위로 끌어올리면서 '쉬운 사용 모드'가 찾는다. \n 3. '쉬운 사용 모드' 글씨를 누르고 한번 더 누른다.", "mode");
+                showCustomDialog("쉬운 모드 사용","1. 이동하기 버튼을 누른다. \n2. 아래에서 위로 끌어올리면서 '쉬운 사용 모드'가 찾는다. \n3. '쉬운 사용 모드' 글씨를 누르고 한번 더 누른다.", "mode");
             }
         });
         app.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showCustomDialog("어플리케이션 권한 설정","1. 이동하기 버튼을 누른다. \n 2. 아래에서 위로 끌어올리면서 '쉬운 사용 모드'가 찾는다. \n 3. '쉬운 사용 모드' 글씨를 누르고 한번 더 누른다.", "app");
+                showCustomDialog("어플리케이션 권한","1. 이동하기 버튼을 누른다. ", "app");
             }
         });
 
         phone_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showCustomDialog("휴대전화 정보 확인","1. 설정에 들어간다.\n 2. 화면을 맨 아래로 내린다.\n 3. '휴대전화 정보' 를 클릭한다.", "device");
+                showCustomDialog("휴대전화 정보 확인","1. 설정에 들어간다.\n2.화면을 맨 아래로 내린다.\n3.'휴대전화 정보' 를 클릭한다.", "device");
             }
         });
     }
