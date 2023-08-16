@@ -1,113 +1,118 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/android_lar"
-    android:layout_width="800dp"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:layout_width="412dp"
+    android:layout_height="892dp"
+    android:background="#F5FFFF">
 
     <TextView
         android:id="@+id/info"
-        android:layout_width="137dp"
-        android:layout_height="29dp"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="80dp"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="148dp"
+        android:layout_centerHorizontal="true"
         android:text="설정으로 편하게 이동하세요!"
         android:textStyle="bold"
-        android:textSize="11dp" />
+        android:textSize="20dp"
+        />
 
-    <!-- my버튼 -->
-
-    <View
-        android:id="@+id/line"
-        android:layout_width="420dp"
-        android:layout_height="2px"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="119dp"
-        android:background="#000000" />
 
     <!-- 글자 크기 변경-->
-
-
-    <Button
-        android:id="@+id/magni"
-        android:layout_width="380dp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="154dp"
-        android:background="@drawable/border"
-        android:elevation="4dp"
-        android:gravity="center_vertical|left"
-        android:text="화면 확대하기(돋보기 기능)"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="151dp"
-        android:layout_height="130dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="-12dp"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/img2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"/>
 
-    <Button
+    <ImageButton
+        android:id="@+id/magni"
+        android:src="@drawable/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="화면확대"
+        android:maxWidth="370dp"
+        android:maxHeight="90dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="25dp"/>
+
+    <ImageButton
         android:id="@+id/btn_fontSize"
-        android:layout_width="380dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="262dp"
-        android:background="@drawable/border"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:gravity="center_vertical|left"
-        android:text="글자 크기 변경하기"
-        android:elevation="4dp" />
+        android:src="@drawable/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="글자크기"
+        android:maxWidth="370dp"
+        android:maxHeight="90dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="25dp"/>
 
     <!-- 쉬운 사용 모드-->
-    <Button
+    <ImageButton
         android:id="@+id/btn_easyMode"
-        android:layout_width="380dp"
-        android:layout_height="70dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="368dp"
-        android:text="쉬운 사용 모드로 변환"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:gravity="center_vertical|left"
-        android:background="@drawable/border"
-        android:elevation="4dp" />
+        android:src="@drawable/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="쉬운모드"
+        android:maxWidth="370dp"
+        android:maxHeight="90dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="25dp"/>
 
     <!-- 어플리케이션 권한 설정 -->
-    <Button
+    <ImageButton
         android:id="@+id/app"
-        android:layout_width="380dp"
-        android:layout_height="70dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="474dp"
-        android:text="어플리케이션 권한 설정"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:gravity="center_vertical|left"
-        android:background="@drawable/border"
-        android:elevation="4dp" />
+        android:src="@drawable/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="어플권한"
+        android:maxWidth="370dp"
+        android:maxHeight="90dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="25dp"/>
 
     <!-- 휴대전화 정보 -->
-    <Button
+    <ImageButton
         android:id="@+id/phone_info"
-        android:layout_width="380dp"
-        android:layout_height="70dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="580dp"
-        android:text="휴대전화 정보 확인"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:gravity="center_vertical|left"
-        android:background="@drawable/border"
-        android:elevation="4dp" />
+        android:src="@drawable/btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="정보확인"
+        android:maxWidth="370dp"
+        android:maxHeight="90dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="25dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_exit"
+        android:src="@drawable/btn6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="종료"
+        android:maxWidth="370dp"
+        android:maxHeight="80dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_marginTop="725dp"
+        android:layout_marginLeft="25dp"/>
 
 </RelativeLayout>

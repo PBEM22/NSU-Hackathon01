@@ -25,8 +25,8 @@
         android:paddingEnd="20dp"
         android:text="닫기"
         android:textSize="20dp"
-        android:textColor="#111111"
-        android:background="#E9FFCD"
+        android:textColor="#FFFFFF"
+        android:background="#4CC486"
         android:elevation="4dp" />
 
 </RelativeLayout>

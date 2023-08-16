@@ -3,31 +3,31 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageButton;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button magni;
-    private Button btn_fontSize;
-    private Button btn_easyMode;
-    private Button app;
-    private Button phone_info;
-    private TextView  buttonLabel;
+    private AppCompatImageButton magni;
+    private AppCompatImageButton btn_fontSize;
+    private AppCompatImageButton btn_easyMode;
+    private AppCompatImageButton app;
+    private AppCompatImageButton phone_info;
+    private TextView buttonLabel;
 
     private int clickCount = 0;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         //액션 바(타이틀 바) 없애기
         ActionBar actionBar = getSupportActionBar();
@@ -131,4 +131,6 @@ public class MainActivity extends AppCompatActivity {
         CustomDialog customDialog = new CustomDialog(MainActivity.this, buttonLabel, contents, type);
         customDialog.show();
     }
+
+
 }
