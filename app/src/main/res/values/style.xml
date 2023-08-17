@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextViewCustomStyle">
+        <item name="android:lineSpacingExtra">6dp</item> <!-- 원하는 줄 간격 설정 -->
+    </style>
+</resources>
