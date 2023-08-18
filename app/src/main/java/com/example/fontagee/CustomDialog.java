@@ -69,7 +69,7 @@ public class CustomDialog extends Dialog {
     }
 
     private void showApp(Context context) {
-        Intent intent = new Intent(Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS);
+        Intent intent = new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
         context.startActivity(intent);
     }
 }
